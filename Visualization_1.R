@@ -8,7 +8,6 @@ data_test
 Subset_Data <- data_test %>% filter(Country %in% c("United States", "China","United Kingdom","World","South Korea"))
 
 library(ggplot2)
-USData
 ggplot(data=Subset_Data) + geom_line(aes(x=date,y=`Cases Per Million`, color=Country)) + scale_y_log10()
 
 
