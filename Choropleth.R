@@ -10,7 +10,7 @@ library(dplyr)
 library(broom)
 library(tidyverse)
 
-setwd("C:/Users/micha/Google Drive/GitHub/Group7OrientationHackathon")
+setwd("/Users/ben_cosgo/bootcamp/Group7OrientationHackathon")
 
 # Get the data from 
 data <- read_csv("data/owid-covid-data.csv", col_names = T)
@@ -29,8 +29,11 @@ cartography::choroLayer(spdf = my_spdf
                         , breaks=c(0, 5, 10, 50, 100, 500, 1000, 2000, Inf) 
                         , legend.horiz = TRUE
                         , col = colors
-                        , legend.title.txt = ""
+                        , legend.title.txt = "Cases per Million"
                         , colNA = "white"
                         , legend.nodata = "No Data"
+                        , legend.title.cex = 1.3
+                        , legend.values.cex = 1.2
+                        , lwd = 0.3
                         )
 title("Total confirmed COVID-19 cases per million people, June 10, 2020")
