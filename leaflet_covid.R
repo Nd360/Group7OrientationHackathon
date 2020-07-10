@@ -33,7 +33,10 @@ mynewspdf <- tigris::geo_join(shp, current_data, "iso_a3", "iso_code")
 
 # figure out new bins....
 bins <- c(0, 5, 10, 50, 100, 500, 1000, 2000, Inf)
-pal <- colorBin("YlOrRd", domain = mynewspdf$total_cases_per_million, bins = bins)
+pal <- colorBin("PuRd", domain = mynewspdf$total_cases_per_million, bins = bins)
+
+colors <- c("papayawhip", "pink", "pink1", "hotpink","maroon1", "maroon2", "maroon3", "maroon4")
+
 
 # labels <- sprintf(
 #   mynewspdf$iso_a3, mynewspdf$total_cases_per_million
