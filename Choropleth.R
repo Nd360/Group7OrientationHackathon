@@ -14,7 +14,7 @@ setwd("/Users/ben_cosgo/bootcamp/Group7OrientationHackathon")
 
 # Get the data from 
 data <- read_csv("data/owid-covid-data.csv", col_names = T)
-current_data_df  <- data %>% filter(date == '2020-05-08') 
+current_data_df  <- data %>% filter(date == '2020-07-10') 
 # Load it as a geospatial object in R
 my_spdf <- readOGR( dsn= "./data/spatial" , layer="TM_WORLD_BORDERS_SIMPL-0.3", verbose=FALSE) 
 
